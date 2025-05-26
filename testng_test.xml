@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" >
+<!--    parallel="test" thread-count="5">-->
+    <test name="Test">
+<!--        <parameter name="browser" value="Chrome" />-->
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="methods" thread-count="5">
+    <test name="Test">
+        <parameter name="browser" value="Chrome" />
+        <classes>
+            <class name="runners.TestRunnerold_Parallel"/>
+        </classes>
+    </test>
+    <test name="Test2">
+        <parameter name="browser" value="Edge" />
+        <classes>
+            <class name="runners.TestRunnerold_Parallel"/>
+        </classes>
+    </test>
+</suite>
