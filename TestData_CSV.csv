@@ -1,0 +1,12 @@
+Header,SC001,SC002
+FirstName,Adam,FirstName
+LastName,Zechary,LastName
+Address,44 Agro avenue,Address
+City,Centuary,City
+State,Ontario,State
+ZipCode,L1E0B6,ZipCode
+PhoneNumber,2898933333,PhoneNumber
+SSN,454565898,SSN
+Username,Tester,Username
+Password,Abcde,Password
+ConfirmPassword,Abcde,ConfirmPassword
