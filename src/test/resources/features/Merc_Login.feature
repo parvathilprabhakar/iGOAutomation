@@ -3,7 +3,7 @@ Feature: Login Feature
 #  Background:
 #    Given I prepare for execution
 
-
+@Testplp
   Scenario Outline: Login on Mercury Demo page
     Given I am on the login page
     When I enter valid credentials username as '<username>' and password as '<password>'

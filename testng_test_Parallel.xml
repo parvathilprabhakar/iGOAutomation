@@ -3,13 +3,13 @@
     <test name="Test">
         <parameter name="browser" value="Chrome" />
         <classes>
-            <class name="runners.TestRunnerold_Parallel"/>
+            <class name="runners.TestRunner"/>
         </classes>
     </test>
     <test name="Test2">
         <parameter name="browser" value="Edge" />
         <classes>
-            <class name="runners.TestRunnerold_Parallel"/>
+            <class name="runners.TestRunner"/>
         </classes>
     </test>
 </suite>

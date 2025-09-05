@@ -13,6 +13,7 @@ public class ThreadManager {
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
     private static ThreadLocal<GenericUtility> uThread = new ThreadLocal<>();
 
+
     //-------------------------- Driver -------------------------------
     public static WebDriver setDriver(String browser) throws Exception {
         System.out.println("Driver set to: "+browser);

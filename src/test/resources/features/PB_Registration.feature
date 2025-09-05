@@ -11,7 +11,7 @@ Feature: Login Feature
     And I logout of my account
 
 ###################################################################################
-
+  @Testplp
   Scenario Outline: ParaBank Login
     Given I am on the ParaBank home page
     When I login to my ParaBank account with '<Username>' and '<Password>'

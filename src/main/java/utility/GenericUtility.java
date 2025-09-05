@@ -26,10 +26,10 @@ public class GenericUtility {
 	WebElement e;
 	String data;
 	Actions actions;
-	public ExtentReport rep;
+	public ExtentReport_Avent rep;
 	ReadPropFile prop = new ReadPropFile();
 
-	public GenericUtility(WebDriver driver, ExtentReport rep) {
+	public GenericUtility(WebDriver driver, ExtentReport_Avent rep) {
 		this.driver = driver;
         this.rep = rep;
 		//rep.u=this;
@@ -52,21 +52,25 @@ public class GenericUtility {
 //	}
 
 	public String takeScreenshot() {
-		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		String encodedBase64 = null;
-		FileInputStream fileInputStreamReader = null;
-		try {
-			fileInputStreamReader = new FileInputStream(scrFile);
-			byte[] bytes = new byte[(int)scrFile.length()];
-			fileInputStreamReader.read(bytes);
-			encodedBase64 = new String(Base64.encodeBase64(bytes));
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return "data:image/png;base64,"+encodedBase64;
+		return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
 	}
+
+//	public String takeScreenshot() {
+//		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+//		String encodedBase64 = null;
+//		FileInputStream fileInputStreamReader = null;
+//		try {
+//			fileInputStreamReader = new FileInputStream(scrFile);
+//			byte[] bytes = new byte[(int)scrFile.length()];
+//			fileInputStreamReader.read(bytes);
+//			encodedBase64 = new String(Base64.encodeBase64(bytes));
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		return "data:image/png;base64,"+encodedBase64;
+//	}
 	// *********************** Launching URL **********************************
 //	public void launchUrl(String url) {
 //		driver.get(url);
@@ -83,7 +87,7 @@ public class GenericUtility {
 			driver.get(prop.getRunConfig().getProperty("UAT_URL"));
 		}
 try{
-		driver.manage().window().maximize();}catch(Exception e){}//ToDo: Delete Try-catch after demo
+		driver.manage().window().maximize();}catch(Exception e){driver.manage().window().maximize();}
 		//waitForLoading();
 
 	}
